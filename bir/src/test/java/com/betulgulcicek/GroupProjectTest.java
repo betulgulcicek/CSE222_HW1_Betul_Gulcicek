@@ -87,8 +87,8 @@ public class GroupProjectTest {
         Course course = new Course("345", courseName, true);
         course.setCourseName(courseName);
         GroupProject instance = new GroupProject("12/02/2016", "16/02/2016", 9);
-        //instance.setCourseName(course);
-        String expResult = "Course Name: " + instance.getCourseName()
+        instance.setCourseName(course);
+        String expResult = "Course Name: " + instance.getCourseName().getCourseName()
                 + ", Deadline: " + instance.getDeadline() + ", Late Deadline: " 
                 + instance.getLateDeadline()
                 + ", Many People: " + instance.howManyStudent();

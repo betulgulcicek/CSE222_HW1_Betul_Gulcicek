@@ -209,9 +209,9 @@ public class TeacherTest {
     @Test
     public void testAddStudent() {
         System.out.println("addStudent");
-        Students s = new Students("356", "ali", "ali@gmail.com");
-        Teacher instance = new Teacher("34", "veli", "veli@gmail.com");
-        instance.addStudent((Student) s);
+        Student s = new Student("356", "ali", "ali@gmail.com");
+        Course instance = new Course("356", "Tatih",true);
+        instance.addStudent(s, true);
     }
 
     /**
@@ -222,8 +222,7 @@ public class TeacherTest {
         System.out.println("removeStudent");
         String id = "456";
         Students s = new Student(id, "ali", "ali@gmail.com");
-        Teacher instance = new Teacher("34", "veli", "veli@gmail.com");
-        instance.addStudent((Student) s);
+        Course instance = new Course("356", "Tatih",true);
         instance.removeStudent(id);
     }
 
@@ -234,8 +233,8 @@ public class TeacherTest {
     public void testAddTutor() throws NullPointerException{
         System.out.println("addTutor");
         Tutor t = new Tutor("34", "selin", "selin@gmail.com");
-        Teacher instance = new Teacher("356", "buse", "buse@gmail.com");
-        instance.addTutor(t);
+        Course instance = new Course("356", "Tatih",true);
+        instance.addTutor(t, true);
     }
 
     /**
@@ -244,8 +243,9 @@ public class TeacherTest {
     @Test
     public void testRemoveTutor() {
         System.out.println("removeTutor");
-        String id = "";
-        Teacher instance = new Teacher();
+        String id = "34";
+        Tutor t = new Tutor(id, "selin", "selin@gmail.com");
+        Course instance = new Course("356", "Tatih",true);
         instance.removeTutor(id);
     }
 

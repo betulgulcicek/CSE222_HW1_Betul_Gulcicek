@@ -17,25 +17,25 @@ import static org.junit.Assert.*;
  * @author GULCİCEK
  */
 public class HomeworkTest {
-    
+
     public HomeworkTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
         System.out.println(" HomeworkTest.BeforeClass");
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
         System.out.println(" HomeworkTest.AfterClass");
     }
-    
+
     @Before
     public void setUp() {
         System.out.println(" HomeworkTest.Before");
     }
-    
+
     @After
     public void tearDown() {
         System.out.println(" HomeworkTest.After");
@@ -65,11 +65,12 @@ public class HomeworkTest {
         course.setCourseID("34");
         course.setCourseName(courseName);
         course.setIsCourseActive(true);
-        String expResult = "Course Name: " + instance.getCourseName()
+        instance.setCourseName(course);
+        String expResult = "Course Name: " + instance.getCourseName().getCourseName()
                 + ", Deadline: " + instance.getDeadline() + ", Late Deadline: " + instance.getLateDeadline()
                 + ", Many People: " + instance.howManyStudent();
         String result = instance.toString();
         assertEquals(expResult, result);
     }
-    
+
 }

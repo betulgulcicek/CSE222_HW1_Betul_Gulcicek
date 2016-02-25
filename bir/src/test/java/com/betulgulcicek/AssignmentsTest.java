@@ -136,10 +136,11 @@ public class AssignmentsTest {
     public void testToString() {
         System.out.println("toString");
         Course course = new Course();
-        course.setCourseName("null");
+        course.setCourseName("fizik");
         course.setCourseID("12334");
         Assignments instance = new Homework("14/10/2016", "20/10/2016");
-        String expResult = "Course Name: " + course.getCourseName()
+         instance.setCourseName(course);
+        String expResult = "Course Name: " + instance.getCourseName().getCourseName()
                 + ", Deadline: " + instance.getDeadline() + ", Late Deadline: " + instance.getLateDeadline()
                 + ", Many People: " + instance.howManyStudent();
         String result = instance.toString();

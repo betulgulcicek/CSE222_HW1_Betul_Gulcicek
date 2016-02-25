@@ -21,21 +21,26 @@ public class UsersTest {
     public UsersTest() {
     }
     
-    @BeforeClass
+     @BeforeClass
     public static void setUpClass() {
+        System.out.println(" UsersTest.BeforeClass");
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
+        System.out.println(" UsersTest.AfterClass");
     }
-    
+
     @Before
     public void setUp() {
+        System.out.println(" UsersTest.Before");
     }
-    
+
     @After
     public void tearDown() {
+        System.out.println(" UsersTest.After");
     }
+
 
     /**
      * Test of getUserID method, of class Users.
@@ -43,12 +48,11 @@ public class UsersTest {
     @Test
     public void testGetUserID() {
         System.out.println("getUserID");
-        Users instance = new Users();
-        String expResult = "";
+        String id = "345", name = "Ali", mail = "ali@gmail.com";
+        Users instance = new Student(id, name, mail);
+        String expResult = "345";
         String result = instance.getUserID();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -57,11 +61,9 @@ public class UsersTest {
     @Test
     public void testSetUserID() {
         System.out.println("setUserID");
-        String userID = "";
-        Users instance = new Users();
+        String userID = "658768";
+        Users instance = new Student(userID, "Betul", "betul@gmail.com");
         instance.setUserID(userID);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -70,12 +72,11 @@ public class UsersTest {
     @Test
     public void testGetUserName() {
         System.out.println("getUserName");
-        Users instance = new Users();
-        String expResult = "";
+        String id = "345", name = "Veli", mail = "veli@gmail.com";
+        Users instance = new Tutor(id, name, mail);
+        String expResult = "Veli";
         String result = instance.getUserName();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -84,11 +85,9 @@ public class UsersTest {
     @Test
     public void testSetUserName() {
         System.out.println("setUserName");
-        String userName = "";
-        Users instance = new Users();
+        String userName = "Erkan";
+        Users instance = new Teacher("34543", userName, "erkan@gmail.com");
         instance.setUserName(userName);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -97,12 +96,11 @@ public class UsersTest {
     @Test
     public void testGetEmail() {
         System.out.println("getEmail");
-        Users instance = new Users();
-        String expResult = "";
+        String id = "345", name = "Ali", mail = "ali@gmail.com";
+        Users instance = new Student(id, name, mail);
+        String expResult = "ali@gmail.com";
         String result = instance.getEmail();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -111,11 +109,9 @@ public class UsersTest {
     @Test
     public void testSetEmail() {
         System.out.println("setEmail");
-        String email = "";
-        Users instance = new Users();
+        String email = "tarik@gmail.com";
+        Users instance = new Teacher("34543", "tarik", email);
         instance.setEmail(email);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -124,10 +120,8 @@ public class UsersTest {
     @Test
     public void testEnrolOperations() {
         System.out.println("enrolOperations");
-        Users instance = new Users();
+        Users instance = new Tutor();
         instance.enrolOperations();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }

@@ -21,26 +21,30 @@ public class TutorTest {
     public TutorTest() {
     }
     
-    @BeforeClass
+   @BeforeClass
     public static void setUpClass() {
+        System.out.println(" TutorTest.BeforeClass");
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
+        System.out.println(" TutorTest.AfterClass");
     }
-    
+
     @Before
     public void setUp() {
+        System.out.println(" TutorTest.Before");
     }
-    
+
     @After
     public void tearDown() {
+        System.out.println(" TutorTest.After");
     }
+
 
     @Test
     public void testSomeMethod() {
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        System.out.println("Users classini extend eden bir class\n");
     }
     
 }
